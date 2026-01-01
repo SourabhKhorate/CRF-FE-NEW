@@ -1,0 +1,69 @@
+.fund-col {
+    display: flex;
+}
+
+/* makes Card stretch to same height */
+.fund-card {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+}
+
+.fund-card .ant-card-head {
+    padding: 16px;
+    border-bottom: 1px solid #f0f0f0;
+    display: flex;
+    align-items: flex-start;
+}
+
+.fund-card .ant-card-head-title {
+    width: 100%;
+}
+
+/* ensure title uses available width */
+
+/* Title styles */
+.card-title {
+    color: #110379;
+    font-weight: 600;
+    font-family: 'Segoe UI', sans-serif;
+    font-size: 18px;
+    line-height: 1.4;
+    cursor: pointer;
+    /* ensure consistent header height for 2 lines */
+    min-height: 52px;
+    /* tweak this if you change font-size/line-height */
+    box-sizing: border-box;
+}
+
+/* two-line clamp with ellipsis */
+.card-title.clamped {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: normal;
+}
+
+/* expanded state: remove clamp */
+.card-title.expanded {
+    display: block;
+    overflow: visible;
+}
+
+/* keep card body growing so footer buttons stay at bottom */
+.fund-card .ant-card-body {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    padding: 16px;
+}
+
+.card-footer {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-top: auto;
+}
